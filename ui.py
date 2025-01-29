@@ -48,8 +48,8 @@ st.markdown('<h1 class="main-title">News Summarizer</h1>', unsafe_allow_html=Tru
 
 # Add dropdown for news categories
 news_categories = [
-    "technology", "business", "sports", "entertainment", 
-    "science", "health", "politics", "world"
+    "💼 business", "🎭 entertainment", "🏥 health", "🏛️ politics",
+    "🔬 science", "⚽ sports", "💻 technology", "🌍 world"
 ]
 selected_category = st.selectbox(
     "Select news category",
