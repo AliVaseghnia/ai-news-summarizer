@@ -2,6 +2,8 @@
 
 A simple news aggregation tool that collects articles from NewsAPI and generates AI-powered summaries using OpenAI GPT-3.5 Turbo and LangChain. The project includes a streamlined pipeline for ingesting news articles, summarizing content, and presenting it through a clean web interface.
 
+The ingestion system (`ingest.py`) fetches articles from NewsAPI's `/v2/everything` endpoint with configurable filters and implements URL-based deduplication before storing in MongoDB. The summarization engine (`summarize.py`) processes these articles using LangChain's MapReduce architecture, where articles are first split and summarized in chunks (map phase) before being combined into a final coherent summary (reduce phase). The system uses OpenAI's GPT-3.5 Turbo model for generating summaries and maintains separate MongoDB collections for raw articles and their summaries.
+
 ## Features
 
 - 🔄 Automated news article collection using NewsAPI
