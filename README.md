@@ -1,11 +1,11 @@
-# News Aggregator with AI-Powered Summarization
+# News Aggregator with AI Summarization
 
-A powerful news aggregation system that collects articles from various sources and generates AI-powered summaries using GPT-4. The project includes a streamlined pipeline for ingesting news articles, summarizing content, and presenting it through a clean web interface.
+A simple news aggregation tool that collects articles from NewsAPI and generates AI-powered summaries using OpenAI GPT-3.5 Turbo and LangChain. The project includes a streamlined pipeline for ingesting news articles, summarizing content, and presenting it through a clean web interface.
 
 ## Features
 
 - 🔄 Automated news article collection using NewsAPI
-- 🤖 AI-powered article summarization using GPT-4
+- 🤖 AI-powered article summarization using GPT-3.5 Turbo
 - 💾 MongoDB integration for efficient data storage
 - 🌐 Clean web interface built with Streamlit
 - 🐳 Docker support for easy deployment
@@ -15,7 +15,7 @@ A powerful news aggregation system that collects articles from various sources a
 The project consists of three main components:
 
 1. **Ingest System** (`ingest.py`): Collects articles from NewsAPI and stores them in MongoDB
-2. **Summarization Engine** (`summarize.py`): Processes articles using LangChain and GPT-4 to generate concise summaries
+2. **Summarization Engine** (`summarize.py`): Processes articles using LangChain and GPT-3.5 Turbo to generate concise summaries
 3. **Web Interface** (`ui.py`): Presents the summarized articles through a Streamlit-based UI
 
 ## Prerequisites
@@ -54,23 +54,6 @@ MONGO_URI=your_mongodb_connection_string
 
 ## Usage
 
-### Running with Python
-
-1. Start the news ingestion:
-```bash
-python ingest.py
-```
-
-2. Generate summaries:
-```bash
-python summarize.py
-```
-
-3. Launch the web interface:
-```bash
-streamlit run ui.py
-```
-
 ### Running with Docker
 
 1. Build and start the services:
@@ -87,26 +70,3 @@ docker-compose up --build
 - `Dockerfile`: Container configuration
 - `docker-compose.yml`: Multi-container Docker configuration
 - `.env`: Environment variables configuration
-
-## Dependencies
-
-- requests==2.31.0
-- pymongo==4.6.1
-- openai==1.56.1
-- langchain==0.1.9
-- langchain-openai==0.0.8
-- streamlit==1.32.0
-- python-dotenv==1.0.7
-- newsapi-python==0.2.7
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch for your feature
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
