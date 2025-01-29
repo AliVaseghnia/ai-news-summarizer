@@ -22,43 +22,28 @@ The project consists of three main components:
 
 ## Prerequisites
 
-- Python 3.8+
-- MongoDB
+- Docker and Docker Compose
 - OpenAI API key
 - NewsAPI key
-- Docker and Docker Compose (optional)
+- MongoDB connection string (if needed)
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd news-aggregator-ai-summarizer
+git clone https://github.com/AliVaseghnia/ai-news-summarizer.git
+cd ai-news-summarizer
 ```
 
-2. Create and activate a virtual environment:
+2. Copy the example environment file and update it with your credentials:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+cp .env.example .env
 ```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Create a `.env` file with your configuration:
-```
-OPENAI_API_KEY=your_openai_api_key
-NEWS_API_KEY=your_newsapi_key
-MONGO_URI=your_mongodb_connection_string
-```
+Then edit `.env` with your API keys. The default MongoDB URI will work with the Docker setup.
 
 ## Usage
 
-### Running with Docker
-
-1. Build and start the services:
+Build and start the services:
 ```bash
 docker-compose up --build
 ```
