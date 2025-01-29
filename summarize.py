@@ -55,6 +55,7 @@ def generate_summaries():
         # Save summary
         summary_collection.insert_one({
             "url": article["url"],
+            "title": article["title"],
             "summary": summary,
             "source": article["source"]["name"],
             "publishedAt": article["publishedAt"]
