@@ -48,6 +48,11 @@ Build and start the services:
 docker-compose up --build
 ```
 
+Once the services are running, access the web interface at:
+```
+http://localhost:8501
+```
+
 ## Project Structure
 
 - `ingest.py`: News article collection script
